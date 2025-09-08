@@ -1,0 +1,181 @@
+:root {
+    --accent-color: #00f2fe;
+    --gradient-start: #4facfe;
+    --gradient-end: #00f2fe;
+}
+
+body {
+    background: #111827;
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+}
+
+/* Gradient Background */
+.gradient-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(79,172,254,0.1) 0%, rgba(0,242,254,0.1) 100%);
+    pointer-events: none;
+}
+
+/* Profile Section */
+.profile-image {
+    width: 180px;
+    height: 180px;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.online-indicator {
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    width: 15px;
+    height: 15px;
+    background-color: #10B981;
+    border-radius: 50%;
+    border: 2px solid #1F2937;
+    box-shadow: 0 0 0 2px var(--accent-color);
+}
+
+/* Company Logo */
+.company-logo {
+    max-width: 120px;
+}
+
+/* Text Styles */
+.text-gradient {
+    background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.accent-text {
+    color: var(--accent-color);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* Social Links */
+.social-links {
+    flex-wrap: wrap;
+}
+
+.social-link {
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.social-link:hover {
+    color: var(--accent-color);
+    transform: translateY(-5px);
+}
+
+/* Buttons */
+.btn-glow {
+    background: linear-gradient(45deg, var(--gradient-start), var(--gradient-end));
+    border: none;
+    color: white;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.btn-glow:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px rgba(79,172,254,0.4);
+}
+
+.btn-outline-light:hover {
+    background: rgba(255,255,255,0.1);
+    transform: translateY(-2px);
+}
+
+/* Card Styles */
+.card {
+    background: #1F2937 !important;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+/* Cover Image Styles */
+.card-cover {
+    height: 200px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.cover-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.card:hover .cover-img {
+    transform: scale(1.05);
+}
+
+.cover-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+    background: linear-gradient(to top, #1F2937 0%, rgba(31, 41, 55, 0) 100%);
+    pointer-events: none;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991.98px) {
+    .profile-image {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .social-links {
+        justify-content: center !important;
+    }
+    
+    .action-buttons {
+        justify-content: center !important;
+    }
+}
+
+/* Dark Mode Enhancements */
+.text-light-emphasis {
+    color: #94A3B8 !important;
+}
+
+/* Animations */
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
