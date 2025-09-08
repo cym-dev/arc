@@ -23,11 +23,19 @@ body {
 
 /* Profile Section */
 .profile-image {
-    width: 180px;
-    height: 180px;
+    width: 150px;
+    height: 150px;
     overflow: hidden;
     position: relative;
     z-index: 1;
+    margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+    .profile-image {
+        width: 180px;
+        height: 180px;
+    }
 }
 
 .profile-image img {
@@ -50,14 +58,29 @@ body {
 
 /* Company Logo */
 .company-logo {
-    max-width: 120px;
+    max-width: 100px;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .company-logo {
+        max-width: 120px;
+    }
 }
 
 /* Text Styles */
 .text-gradient {
     background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
+    font-size: 2rem;
+}
+
+@media (min-width: 768px) {
+    .text-gradient {
+        font-size: 2.5rem;
+    }
 }
 
 .accent-text {
@@ -69,6 +92,14 @@ body {
 /* Social Links */
 .social-links {
     flex-wrap: wrap;
+    gap: 1rem;
+}
+
+@media (max-width: 767px) {
+    .social-links {
+        justify-content: center;
+        margin-bottom: 2rem;
+    }
 }
 
 .social-link {
@@ -147,10 +178,80 @@ body {
 }
 
 /* Responsive Adjustments */
-@media (max-width: 991.98px) {
+/* Extra Large Screens (1920px and above) */
+@media (min-width: 1920px) {
+    .container {
+        max-width: 1600px;
+    }
+    
     .profile-image {
-        width: 150px;
-        height: 150px;
+        width: 220px;
+        height: 220px;
+    }
+    
+    .card-cover {
+        height: 300px;
+    }
+    
+    h1.display-5 {
+        font-size: 3.5rem;
+    }
+    
+    .lead {
+        font-size: 1.5rem;
+    }
+    
+    .social-link {
+        font-size: 2rem;
+    }
+    
+    .btn-lg {
+        padding: 1rem 2rem;
+        font-size: 1.25rem;
+    }
+}
+
+/* Large Desktops (1200px to 1919px) */
+@media (min-width: 1200px) and (max-width: 1919px) {
+    .container {
+        max-width: 1140px;
+    }
+    
+    .profile-image {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .card-cover {
+        height: 250px;
+    }
+}
+
+/* Regular Desktops (992px to 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .profile-image {
+        width: 180px;
+        height: 180px;
+    }
+    
+    .card-cover {
+        height: 220px;
+    }
+    
+    .card-body {
+        padding: 2rem !important;
+    }
+}
+
+/* Tablets (768px to 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .profile-image {
+        width: 160px;
+        height: 160px;
+    }
+    
+    .card-cover {
+        height: 200px;
     }
     
     .social-links {
@@ -159,6 +260,103 @@ body {
     
     .action-buttons {
         justify-content: center !important;
+    }
+    
+    h1.display-5 {
+        font-size: 2.5rem;
+    }
+    
+    .card-body {
+        padding: 1.5rem !important;
+    }
+}
+
+/* Large Phones (576px to 767px) */
+@media (min-width: 576px) and (max-width: 767px) {
+    .profile-image {
+        width: 140px;
+        height: 140px;
+    }
+    
+    .card-cover {
+        height: 180px;
+    }
+    
+    .social-links {
+        justify-content: center !important;
+    }
+    
+    .action-buttons {
+        justify-content: center !important;
+        flex-direction: column;
+    }
+    
+    .action-buttons .btn {
+        width: 100%;
+    }
+    
+    h1.display-5 {
+        font-size: 2rem;
+    }
+    
+    .lead {
+        font-size: 1.1rem;
+    }
+    
+    .card-body {
+        padding: 1.25rem !important;
+    }
+}
+
+/* Small Phones (575px and below) */
+@media (max-width: 575px) {
+    .container {
+        padding: 0.5rem;
+    }
+    
+    .profile-image {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .card-cover {
+        height: 150px;
+    }
+    
+    .social-links {
+        justify-content: center !important;
+        gap: 0.75rem !important;
+    }
+    
+    .social-link {
+        font-size: 1.25rem;
+    }
+    
+    .action-buttons {
+        justify-content: center !important;
+        flex-direction: column;
+        gap: 0.75rem !important;
+    }
+    
+    .action-buttons .btn {
+        width: 100%;
+        padding: 0.75rem;
+    }
+    
+    h1.display-5 {
+        font-size: 1.75rem;
+    }
+    
+    .lead {
+        font-size: 1rem;
+    }
+    
+    .card-body {
+        padding: 1rem !important;
+    }
+    
+    .company-logo {
+        max-width: 100px;
     }
 }
 
